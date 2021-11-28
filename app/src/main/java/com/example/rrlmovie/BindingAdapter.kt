@@ -21,15 +21,6 @@ fun ImageView.bind(photoUrl: String?) {
             .placeholder(R.drawable.loading_animation)
             .error(R.drawable.ic_baseline_broken_image_24)
             .into(this)
-
-
-//        val imgUri =
-//            photoUrl.toUri().buildUpon().scheme("https" + "https://image.tmdb.org/t/p/w500/")
-//                .build()
-//        this.load(imgUri) {
-//            placeholder(R.drawable.loading_animation)
-//            error(R.drawable.ic_broken_image)
-//        }
     }
 }
 
@@ -43,16 +34,12 @@ fun bindStatus(statusImageView: ImageView,
         }
         MoviesApiStatus.DONE ->{
             statusImageView.visibility = View.GONE
-//            statusImageView.setImageResource(R.drawable.ic_baseline_broken_image_24)
-
         }
         MoviesApiStatus.ERROR ->{
             statusImageView.visibility = View.GONE
             statusImageView.setImageResource(R.drawable.ic_baseline_broken_image_24)
         }
     }
-
-
 }
 
 @BindingAdapter("listData")

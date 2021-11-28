@@ -14,7 +14,6 @@ class OverViewDetailFragment : Fragment() {
     var binding : FragmentOverViewDetailBinding? = null
     private val viewModel: MovieVeiwModel by activityViewModels()
 
-
     private var param: Int = 0 // before start
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +37,4 @@ class OverViewDetailFragment : Fragment() {
 
         viewModel.getMovieInfo(param)
     }
-
-
 }

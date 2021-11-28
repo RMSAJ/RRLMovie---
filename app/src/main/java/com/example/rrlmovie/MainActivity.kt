@@ -6,6 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.rrlmovie.databinding.ActivityMainBinding
+import com.example.rrlmovie.network.ResultsItem
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,8 +15,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
 
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.overviewF) as NavHostFragment

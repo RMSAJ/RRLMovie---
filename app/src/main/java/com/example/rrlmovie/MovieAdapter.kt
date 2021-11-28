@@ -17,8 +17,6 @@ import com.example.rrlmovie.overview.OverViewFragmentDirections
 
 class MovieAdapter : ListAdapter<ResultsItem, MovieAdapter.MoviePhotosViewHolder>(DiffCallback)  {
 
-
-
     class MoviePhotosViewHolder(var binding: GridViewItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(moviePhoto: ResultsItem) {
             binding.item = moviePhoto
@@ -31,7 +29,6 @@ class MovieAdapter : ListAdapter<ResultsItem, MovieAdapter.MoviePhotosViewHolder
         override fun areItemsTheSame(oldItem: ResultsItem, newItem: ResultsItem): Boolean {
             return oldItem.id == newItem.id
         }
-
         override fun areContentsTheSame(oldItem: ResultsItem, newItem: ResultsItem): Boolean {
             return oldItem.posterPath == newItem.posterPath
         }
@@ -43,7 +40,6 @@ class MovieAdapter : ListAdapter<ResultsItem, MovieAdapter.MoviePhotosViewHolder
             GridViewItemBinding.inflate(LayoutInflater.from(parent.context))
         )
     }
-
     override fun onBindViewHolder(holder: MoviePhotosViewHolder, position: Int) {
         val moviePhoto = getItem(position)
         holder.bind(moviePhoto)
@@ -52,6 +48,4 @@ class MovieAdapter : ListAdapter<ResultsItem, MovieAdapter.MoviePhotosViewHolder
             holder.itemView.findNavController().navigate(action)
         }
     }
-
-
 }

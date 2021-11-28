@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/option_18"
+        android:title="@string/drama"
+        />
+    <item android:id="@+id/option_12"
+        android:title="@string/adventure" />
+    <item android:id="@+id/option_80"
+        android:title="@string/crime" />
+    <item android:id="@+id/option_16"
+          android:title="@string/animation"/>
+</menu>

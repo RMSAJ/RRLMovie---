@@ -11,7 +11,7 @@ data class Response(
     val totalPages: Int? = null,
 
     @Json(name="results")
-    val results: List<ResultsItem?>? = null,
+    val results: List<ResultsItem>? = null,
 
     @Json(name="total_results")
     val totalResults: Int? = null
@@ -35,7 +35,7 @@ data class ResultsItem(
     val title: String? = null,
 
     @Json(name="genre_ids")
-    val genreIds: List<Int?>? = null,
+    val genreIds: List<Int>? = null,
 
     @Json(name="poster_path")
     val posterPath: String? = null,
@@ -61,3 +61,4 @@ data class ResultsItem(
     @Json(name="vote_count")
     val voteCount: Int? = null
 )
+
